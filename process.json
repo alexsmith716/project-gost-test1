@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "app",
+      "script": "yarn",
+      "args": "start-prod",
+      "autorestart": false,
+    }
+  ]
+}
