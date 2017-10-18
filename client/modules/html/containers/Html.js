@@ -35,19 +35,16 @@ const Html = (props: {
         <style dangerouslySetInnerHTML={{ __html: css }} />
       </head>
       <body>
-        <script
-          type="text\/javascript"
-          src=''
-        />
+        <script src='{`https://maps.googleapis.com/maps/api/js?key=${serverConfig.google.MAPS_API_KEY}&libraries=places`}' />
         <main
           id="app"
           dangerouslySetInnerHTML={{ __html: `<div>${content}</div>` }}
         />
-        /*<script dangerouslySetInnerHTML={{ __html: state }} />
+        <script dangerouslySetInnerHTML={{ __html: state }} />
         {Object.keys(assets.javascript)
           .filter(key => key.includes('app') || key.includes('vendor'))
           .reverse()
-          .map(key => <script key={key} src={assets.javascript[key]} />)}*/
+          .map(key => <script key={key} src={assets.javascript[key]} />)}
       </body>
     </html>
   );
